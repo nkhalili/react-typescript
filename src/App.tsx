@@ -3,23 +3,33 @@ import logo from './logo.svg';
 import './App.css';
 import Message from './Message';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Message name='Navid' message='This is a simple message'/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const initialState = {
+  name: 'Navid',
+  message: 'New Message',
+};
+
+type State = Readonly<typeof initialState>;
+
+class App extends React.Component<any, State> {
+  readonly state: State = initialState;
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Message name={this.state.name} message={this.state.message} />
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
