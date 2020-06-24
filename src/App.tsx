@@ -3,12 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // let firstValue: string = 'Hello';
+  //let firstValue: number = 123;
+  //let firstValue: boolean = true;
+  // let firstValue: number[] = [1, 2, 3];
+  let firstValue: Array<string> = ['hello', 'string', 'array'];
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          The value {firstValue} is of {typeof firstValue} type!
         </p>
         <a
           className="App-link"
