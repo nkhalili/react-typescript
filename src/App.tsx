@@ -1,24 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Message, { mySearch } from './Message';
+import Message from './Message';
 
-const initialState = {
-  name: 'Navid',
-  message: 'New Message',
-};
-
-type State = Readonly<typeof initialState>;
-
-class App extends React.Component<any, State> {
-  readonly state: State = initialState;
+class App extends React.Component {
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Message name={this.state.name} message={this.state.message} />
-          {`Result: ${mySearch('Hello', 'h')}`}
+          <Message />
           <a
             className="App-link"
             href="https://reactjs.org"

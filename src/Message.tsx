@@ -1,25 +1,12 @@
 import React from 'react';
+import messageHoc from './Hoc';
 
-interface UserMessage {
-  name: string;
-  message: string;
-}
-
-const Message = (prop: UserMessage): any => (
+const example = (props: any): any => (
   <p>
-    {prop.name}, {prop.message}
+    {props.name}, {props.message}
   </p>
 );
 
-// using Interface for functions
-interface SearchFunc {
-  (source: string, subString: string): boolean;
-}
-
-export let mySearch: SearchFunc;
-
-mySearch = (source: string, subString: string) => {
-  return source.search(subString) > -1;
-};
+const Message = messageHoc(example);
 
 export default Message;
