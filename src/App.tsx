@@ -3,18 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  // let firstValue: string = 'Hello';
-  //let firstValue: number = 123;
-  //let firstValue: boolean = true;
-  // let firstValue: number[] = [1, 2, 3];
-  let firstValue: Array<string> = ['hello', 'string', 'array'];
+  let aTuple: [string, number] = ['hello', 1];
+  // enum, first letter capital
+  enum Codes {
+    first,
+    second,
+  } // OR enum Codes {first = 1, second =2};
+  let firstName: any = 'string or number, etc';
+
+  const warning = (): void => {
+    console.log('Warning');
+  };
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          The value {firstValue} is of {typeof firstValue} type!
+          The value {firstName} is of {typeof firstName} type!
         </p>
         <a
           className="App-link"
