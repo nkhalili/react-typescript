@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Message message='This is a simple message'/>
+        <Message name='Navid' message='This is a simple message'/>
         <a
           className="App-link"
           href="https://reactjs.org"
