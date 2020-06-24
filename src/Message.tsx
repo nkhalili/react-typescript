@@ -11,4 +11,15 @@ const Message = (prop: UserMessage): any => (
   </p>
 );
 
+// using Interface for functions
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+
+export let mySearch: SearchFunc;
+
+mySearch = (source: string, subString: string) => {
+  return source.search(subString) > -1;
+};
+
 export default Message;

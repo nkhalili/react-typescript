@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Message from './Message';
+import Message, { mySearch } from './Message';
 
 const initialState = {
   name: 'Navid',
@@ -18,6 +18,7 @@ class App extends React.Component<any, State> {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Message name={this.state.name} message={this.state.message} />
+          {`Result: ${mySearch('Hello', 'h')}`}
           <a
             className="App-link"
             href="https://reactjs.org"
